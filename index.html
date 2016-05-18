@@ -3,6 +3,28 @@
 <head>
 <title>HTML Template Tool</title>
 <script type="text/javascript">
+
+<ul class="tab">
+  <li><a href="#" class="tablinks" onclick="openCity(event, 'London')">London</a></li>
+  <li><a href="#" class="tablinks" onclick="openCity(event, 'Paris')">Paris</a></li>
+  <li><a href="#" class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</a></li>
+</ul>
+
+<div id="London" class="tabcontent">
+  <h3>London</h3>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
 var editboxHTML = 
 '<html class="expand close">' +
 '<head>' +
@@ -19,8 +41,10 @@ var editboxHTML =
 '<\/form>' +
 '<\/body>' +
 '<\/html>';
+
 var defaultStuff = '<h3><center>Welcome to the HTML Template Tool!</center><\/h3>\n' +
 '<p><center>Type HTML in the textarea above, and it will magically appear in the frame below.</center><\/p>';
+
 var old = '';
          
 function init()
@@ -30,6 +54,7 @@ function init()
   window.editbox.document.f.ta.value = defaultStuff;
   update();
 }
+
 function update()
 {
   var textarea = window.editbox.document.f.ta;
@@ -42,8 +67,10 @@ function update()
     if (old.replace(/[\r\n]/g,'') == defaultStuff.replace(/[\r\n]/g,''))
     d.close();
   }
+
   window.setTimeout(update, 150);
 }
+
 </script>
 </head>
 
