@@ -1,81 +1,10 @@
 <!DOCTYPE html>
 
-<html>
+<html>a
 <head>
 
 	<title>HTML Template Tool</title>
         
-	<script src="require.js"></script>
-	<script>
-            var assistantPath = "../targetapp/downloaded/js/";
-            require.config({
-                baseUrl: "js/",
-                paths: {
-                    "designer": "app/designer",
-                    //"widgets": "app/widgets",
-                    //"conditional": "app/conditional",
-                    //"palette": "app/palette",
-
-                    "assistantRoot": assistantPath,
-
-                    // Application references
-                    "config": "app/config",    // separate config so we can correctly path to the icons
-
-                    // Globals
-                    "jquery": assistantPath + "lib/jquery-2.1.1.min",
-                    "TweenMax": assistantPath + "lib/TweenMax",
-                    "TweenLite": assistantPath + "lib/TweenLite",
-                    "mathtools": assistantPath + "core/mathtools",
-                    "colortools": assistantPath + "core/colortools",
-                    "events": assistantPath + "core/events",
-                    "Draggable": assistantPath + "lib/utils/Draggable",
-                    "ThrowProps": assistantPath + "lib/plugins/ThrowPropsPlugin",
-                    "analytics": assistantPath + "lib/analytics",
-                    "raven": assistantPath + "lib/raven",
-
-                    "masonry": assistantPath + "core/masonry.pkgd",
-
-
-                    // tools and components
-                    "tilex" : assistantPath + "core/tilex",
-                    "apptools": assistantPath + "core/apptools",
-                    "render_helper": assistantPath + "common/render_helper",
-                    "infographic_components": assistantPath + "common/infographic_components",
-                    "infographic_component_base": assistantPath + "common/infographic_components/base",
-                    "infographic_tools": assistantPath + "common/infographic_tools",
-                    "composite_renderer": assistantPath + "common/composite_renderer",
-                    "syncObject": assistantPath + "core/syncObject",
-
-                    "image_resolver": assistantPath + "core/image_resolver",
-                    "localization": assistantPath + "core/localization",
-                    "applogging": assistantPath + "core/logging",
-                    "locstrings": assistantPath + "core/locstr",
-                    "groups": assistantPath + "core/groups",
-                    "core": assistantPath + "core",
-                    "controls": assistantPath + "core/controls",
-
-                    "wotx_imageresolver": assistantPath + "wotx/image_helper",
-                    "wows_imageresolver": assistantPath + "wows/image_helper",
-
-                },
-                shim: {
-                    'jquery': {
-                        exports: '$'
-                    },
-                    TweenMax: {
-                        exports: 'TweenMax'//it has not exports just puts stuff in globals
-                    },
-                    TweenLite: {
-                        exports: 'TweenLite'//it has not exports just puts stuff in globals
-                    },
-                    mathtools: {
-                        exports: 'mathtools'//it has not exports just puts stuff in globals
-                    }
-                }
-            });
-
-            require(["jquery", "mathtools","designer", "index" ]);
-        </script>
 		
 		<script type="text/javascript">
 	var editboxHTML = 
