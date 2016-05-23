@@ -37,7 +37,7 @@
 	'<p><center>Type HTML in the textarea above, and it will appear in the frame below.</center><\/p>';
 	var old = '';
          
-	var headerHTML =
+	var headerboxHTML =
 		'<div class="container">'+
   '<h2>HTML Template Tool</h2>'+
   <!-- Trigger the modal with a button -->
@@ -81,7 +81,7 @@
 		
 	function init()
 		{
-		window.header.document.write(headerHTML);
+		window.header.document.write(headerboxHTML);
 		window.header.document.close();
 		window.editbox.document.write(editboxHTML);
 		window.editbox.document.close();
@@ -108,7 +108,7 @@
 
 <frameset resizable="yes" rows="50%,*" onload="init();">
   <!-- about:blank confuses opera, so use javascript: URLs instead -->
-  <frame name="header" src="javascript:'';">
+  <frame name="headerbox" src="javascript:'';">
   <frame name="dynamicframe" src="javascript:'';">
   <frame name="editbox" src="javascript:'';">
 </frameset>
