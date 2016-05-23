@@ -13,12 +13,7 @@
 </head>
 
 
-<frameset resizable="yes" rows="50%,*" onload="init();">
-  <!-- about:blank confuses opera, so use javascript: URLs instead -->
-  <frame name="header" src="javascript:'';">
-  <frame name="dynamicframe" src="javascript:'';">
-  <frame name="editbox" src="javascript:'';">
-</frameset>
+
 
 
 <script type="text/javascript">
@@ -108,8 +103,17 @@
 				window.setTimeout(update, 150);
 	}
 </script>
-</head>
 
+
+
+
+</head>
+<frameset resizable="yes" rows="50%,*" onload="init();">
+  <!-- about:blank confuses opera, so use javascript: URLs instead -->
+  <frame name="header" src="javascript:'';">
+  <frame name="dynamicframe" src="javascript:'';">
+  <frame name="editbox" src="javascript:'';">
+</frameset>
 
 
 </html>
