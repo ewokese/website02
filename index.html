@@ -57,21 +57,21 @@
 
 	<script type="text/javascript">
 	var editboxHTML = 
-		'<html class="expand close">' +
+		/*'<html class="expand close">' +
 		'<head>' +
 		'<style type="text/css">' +
 		'.expand { width: 100%; height: 100%; }' +
 		'.close { border: none; margin: 0px; padding: 0px; }' +
 		'html,body { overflow: hidden; }' +
 		'<\/style>' +
-		'<\/head>' +
-		'<body class="expand close" onload="document.f.ta.focus(); document.f.ta.select();">' +
+		'<\/head>' + */
+		'<div class="expand close" onload="document.f.ta.focus(); document.f.ta.select();">' +
 		'<form class="expand close" name="f">' +
 		'<textarea class="expand close" style="background: #def;" name="ta" wrap="hard" spellcheck="false">' +
 		'<\/textarea>' +
 		'<\/form>' +
-		'<\/body>' +
-		'<\/html>';
+		'<\/div>' +
+		//'<\/html>';
 	var defaultStuff = '<h3><center>Welcome to the HTML Template Tool!</center><\/h3>\n' +
 	'<p><center>Type HTML in the textarea above, and it will appear in the frame below.</center><\/p>';
 	var old = '';
