@@ -12,47 +12,10 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="container">
-  <h2>HTML Template Tool</h2>
-  <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Settings</button>
-
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title"><center>Settings</center></h4>
-        </div>
-        <div class="modal-body">
-			 <div><center><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Save</button></center></div>
-			 <br>
-			 <div><center><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Menu</button></center></div>
-			 <br>
-			 <div class="dropdown">
-  <center><button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" class="center">CSS
-  <span class="caret"></span></button>
-  <ul class="dropdown-menu">
-    <li><a href="#">WoWS</a></li>
-    <li><a href="#">WoTX</a></li>
-  </ul>
-</div></center>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  
-</div>
 
 <frameset resizable="yes" rows="50%,*" onload="init();">
   <!-- about:blank confuses opera, so use javascript: URLs instead -->
+  <frame name="header" src=javascript:'';">
   <frame name="dynamicframe" src="javascript:'';">
   <frame name="editbox" src="javascript:'';">
 </frameset>
@@ -80,8 +43,50 @@
 	'<p><center>Type HTML in the textarea above, and it will appear in the frame below.</center><\/p>';
 	var old = '';
          
+	var header=
+		<div class="container">'+
+  <h2>HTML Template Tool</h2>'+
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Settings</button>'+
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">'+
+    <div class="modal-dialog">'+
+    
+      <!-- Modal content-->
+      <div class="modal-content">'+
+        <div class="modal-header">'+
+          <button type="button" class="close" data-dismiss="modal">&times;</button>'+
+          <h4 class="modal-title"><center>Settings</center></h4>'+
+        </div>'+
+        <div class="modal-body">'+
+			 <div><center><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Save</button></center></div>'+
+			 <br>'+
+			 <div><center><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Menu</button></center></div>'+
+			 <br>'+
+			 <div class="dropdown">'+
+  <center><button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" class="center">CSS
+  <span class="caret"></span></button>'+
+  <ul class="dropdown-menu">'+
+    <li><a href="#">WoWS</a></li>'+
+    <li><a href="#">WoTX</a></li>'+
+  </ul>'+
+</div></center>'+
+        </div>'+
+        <div class="modal-footer">'+
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>'+
+        </div>'+
+      </div>'+
+      
+    </div>'+
+  </div>'+
+  
+</div>;
+		'
 	function init()
 		{
+		window.header.document.write(header);
+		window.header.document.close();
 		window.editbox.document.write(editboxHTML);
 		window.editbox.document.close();
 		window.editbox.document.f.ta.value = defaultStuff;
