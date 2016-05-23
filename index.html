@@ -76,8 +76,8 @@
 		
 	function init()
 		{
-		window.header.write(headerboxHTML);
-		window.header.document.close();
+		window.header(headerboxHTML);
+		window.headerclose();
 		window.editbox.document.write(editboxHTML);
 		window.editbox.document.close();
 		window.editbox.document.f.ta.value = defaultStuff;
