@@ -3,7 +3,7 @@
 <html>
 <head>
 
-	<title>HTML Te mplate Tool</title>
+	<title>HTML Template Tool</title>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -99,10 +99,11 @@
 
 </head>
 
+<frameset cols="10%" onload="init();">
+<frame name="headerbox" src="javascript:'';">
+</frameset>
 <frameset resizable="yes" rows="33%,*" onload="init();">
-	=	<frameset rows="*,200">
   <!-- about:blank confuses opera, so use javascript: URLs instead -->
-  <frame name="headerbox" src="javascript:'';">
   <frame name="dynamicframe" src="javascript:'';">
   <frame name="editbox" src="javascript:'';">
 </frameset>
