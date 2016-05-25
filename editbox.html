@@ -59,17 +59,9 @@
 </script>
 </head>
 
-<form name="it">
-<div align="center">
-<input onclick="copyit(this.form.select1)" type="button" value="Press to copy the highlighted text" name="btnCopy">
-<p>
-<textarea name="select1" rows="4" cols="45"></textarea>
-</div>
-</form>
-
 <frameset resizable="yes" rows="50%,*" onload="init();">
   <!-- about:blank confuses opera, so use javascript: URLs instead -->
-  <frame name="dynamicframe" src="javascript:'';">
+  <frame name="dynamicframe ; copyit" src="javascript:'';">
   <frame name="editbox" src="javascript:'';">
 </frameset>
 
