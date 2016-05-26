@@ -1,136 +1,52 @@
 <!DOCTYPE html>
-
-<html>
 <head>
-         <script src="require.js"></script>
-        <script>
-            var assistantPath = "../targetapp/downloaded/js/";
-            require.config({
-                baseUrl: "js/",
-                paths: {
-                    "designer": "app/designer",
-                    //"widgets": "app/widgets",
-                    //"conditional": "app/conditional",
-                    //"palette": "app/palette",
-
-                    "assistantRoot": assistantPath,
-
-                    // Application references
-                    "config": "app/config",    // separate config so we can correctly path to the icons
-
-                    // Globals
-                    "jquery": assistantPath + "lib/jquery-2.1.1.min",
-                    "TweenMax": assistantPath + "lib/TweenMax",
-                    "TweenLite": assistantPath + "lib/TweenLite",
-                    "mathtools": assistantPath + "core/mathtools",
-                    "colortools": assistantPath + "core/colortools",
-                    "events": assistantPath + "core/events",
-                    "Draggable": assistantPath + "lib/utils/Draggable",
-                    "ThrowProps": assistantPath + "lib/plugins/ThrowPropsPlugin",
-                    "analytics": assistantPath + "lib/analytics",
-                    "raven": assistantPath + "lib/raven",
-
-                    "masonry": assistantPath + "core/masonry.pkgd",
-
-
-                    // tools and components
-                    "tilex" : assistantPath + "core/tilex",
-                    "apptools": assistantPath + "core/apptools",
-                    "render_helper": assistantPath + "common/render_helper",
-                    "infographic_components": assistantPath + "common/infographic_components",
-                    "infographic_component_base": assistantPath + "common/infographic_components/base",
-                    "infographic_tools": assistantPath + "common/infographic_tools",
-                    "composite_renderer": assistantPath + "common/composite_renderer",
-                    "syncObject": assistantPath + "core/syncObject",
-
-                    "image_resolver": assistantPath + "core/image_resolver",
-                    "localization": assistantPath + "core/localization",
-                    "applogging": assistantPath + "core/logging",
-                    "locstrings": assistantPath + "core/locstr",
-                    "groups": assistantPath + "core/groups",
-                    "core": assistantPath + "core",
-                    "controls": assistantPath + "core/controls",
-
-                    "wotx_imageresolver": assistantPath + "wotx/image_helper",
-                    "wows_imageresolver": assistantPath + "wows/image_helper",
-
-                },
-                shim: {
-                    'jquery': {
-                        exports: '$'
-                    },
-                    TweenMax: {
-                        exports: 'TweenMax'//it has not exports just puts stuff in globals
-                    },
-                    TweenLite: {
-                        exports: 'TweenLite'//it has not exports just puts stuff in globals
-                    },
-                    mathtools: {
-                        exports: 'mathtools'//it has not exports just puts stuff in globals
-                    }
-                }
-            });
-
-            require(["jquery", "mathtools","designer", "index" ]);
-        </script>
-		
-		<script type="text/javascript">
-	var editboxHTML = 
-		'<html class="expand close">' +
-		'<head>' +
-		'<style type="text/css">' +
-		'.expand { width: 100%; height: 100%; }' +
-		'.close { border: none; margin: 0px; padding: 0px; }' +
-		'html,body { overflow: hidden; }' +
-		'<\/style>' +
-		'<\/head>' +
-		'<body class="expand close" onload="document.f.ta.focus(); document.f.ta.select();">' +
-		'<form class="expand close" name="f">' +
-		'<textarea class="expand close" style="background: #def;" name="ta" wrap="hard" spellcheck="false">' +
-		'<\/textarea>' +
-		'<\/form>' +
-		'<\/body>' +
-		'<\/html>';
-	var defaultStuff = '<h3><center>Welcome to the HTML Template Tool!</center><\/h3>\n' +
-	'<p><center>Type HTML in the textarea above, and it will appear in the frame below.</center><\/p>';
-	var old = '';
-         
-	function init()
-		{
-		window.editbox.document.write(editboxHTML);
-		window.editbox.document.close();
-		window.editbox.document.f.ta.value = defaultStuff;
-		update();
-		}
-	function update()
-	{
-			var textarea = window.editbox.document.f.ta;
-			var d = dynamicframe.document; 
-  
-				if (old != textarea.value) {
-				old = textarea.value;
-				d.open();
-				d.write(old);
-				if (old.replace(/[\r\n]/g,'') == defaultStuff.replace(/[\r\n]/g,''))
-				d.close();
-		}
-				window.setTimeout(update, 150);
-	}
-</script>
+	 <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
+		
+<body>
+		<div class="container">
+  <h2><center>HTML Template Tool</center></h2>
+  <!-- Trigger the modal with a button -->
+  <center><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Settings</button></center>
 
-<frameset resizable="yes" rows="50%,25%,25%" onload="init();">
-  <!-- about:blank confuses opera, so use javascript: URLs instead -->
-  <frame name="dynamicframe" src="javascript:'';">
-  <frame name="editbox" src="javascript:'';">
-  <frame         <div id ="dataeditor" style="position: absolute; left:0px; bottom: 0px; width: 50%; height: 20%; border: 1px solid white; background-color: darkgray;">
-            <h3 style="float: left;">Data editor:</h3>
-
-            <textarea id="datadefiner"  style="height: 90%; width: 100%; border: 1px solid white;"></textarea>
-
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"><center>Settings</center></h4>
         </div>
-</frame>
+        <div class="modal-body">
+			 <div><center><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Save</button></center></div>
+			 <div id="savesnippet" style="float: left; margin: 5px; background-color: lightgray; padding: 0px 10px; border: 1px solid #666666;">Save</div>
+            <input id="snippetname" style="float: left; margin: 5px; font-size: 14px;" value="&lt enter name &gt" size="50" />			
+			 <br>
+			 <div><center><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Menu</button></center></div>
+			 <br>
+			 <div class="dropdown">
+  <center><button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" class="center">CSS
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a value="wows" href="#">WoWS</a></li>
+    <li><a value="wotx" href="#">WoTX</a></li>
+  </ul>
+</div></center>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
   
-</frameset>
-
+</div>
+</body>
 </html>
