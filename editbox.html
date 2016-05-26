@@ -48,10 +48,18 @@
 </script>
 </head>
 
-<frameset resizable="yes" rows="50%,*" onload="init();">
+<frameset resizable="yes" rows="50%,25%,25%" onload="init();">
   <!-- about:blank confuses opera, so use javascript: URLs instead -->
   <frame name="dynamicframe" src="javascript:'';">
   <frame name="editbox" src="javascript:'';">
+  <frame         <div id ="dataeditor" style="position: absolute; left:0px; bottom: 0px; width: 50%; height: 20%; border: 1px solid white; background-color: darkgray;">
+            <h3 style="float: left;">Data editor:</h3>
+
+            <textarea id="datadefiner"  style="height: 90%; width: 100%; border: 1px solid white;"></textarea>
+
+        </div>
+</frame>
+  
 </frameset>
 
 </html>
