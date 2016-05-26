@@ -1,104 +1,119 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <link href="http://getbootstrap.com/2.3.2/assets/css/bootstrap.css" rel="stylesheet" />
-  <link href="http://getbootstrap.com/2.3.2/assets/js/google-code-prettify/prettify.css" rel="stylesheet" />
-<style>
-  body { 
-    padding-top: 40px; 
-  }
-</style>
-  <link href="http://getbootstrap.com/2.3.2/assets/css/bootstrap-responsive.css" rel="stylesheet" />
-  <link href="bootstrap-modal.css" rel="stylesheet" />
-<style>      
-  .text-center { 
-    text-align: center; 
-  }
 
-  .marketing h1 {
-    font-size: 50px;
-    font-weight: lighter;
-    line-height: 1;
-  }
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+        <meta charset="utf-8">
+        <title>Bootply snippet - Bootstrap 3 Modal</title>
+        <meta name="generator" content="Bootply" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="description" content="Example markup for the new Bootstrap 3 modal dialog." />
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+        
+        <!--[if lt IE 9]>
+          <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <link rel="apple-touch-icon" href="/bootstrap/img/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/bootstrap/img/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/bootstrap/img/apple-touch-icon-114x114.png">
 
-  .marketing p {
-    font-size: 18px;
-  }
-  
-  </style>
-</head>
 
-<body>
 
-<div class="container">
-  <h2>Modal Example</h2>
-  <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
 
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
 
-  <div class="modal-scrollable" style="z-index: 1060;"><div id="stack1" class="modal hide fade in" tabindex="-1" data-focus-on="input:first" aria-hidden="false" style="display: block; margin-top: -149.5px;">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3>Stack One</h3>
-  </div>
-  <div class="modal-body">
-    <p>One fine body…</p>
-    <p>One fine body…</p>
-    <p>One fine body…</p>
-    <input type="text" data-tabindex="1">
-    <input type="text" data-tabindex="2">
-    <button class="btn" data-toggle="modal" href="#stack2">Launch modal</button>
-  </div>
-  <div class="modal-footer">
-    <button type="button" data-dismiss="modal" class="btn">Close</button>
-    <button type="button" class="btn btn-primary">Ok</button>
-  </div>
-</div></div>
-<div class="modal-backdrop fade in" style="z-index: 1050;"></div>
-<div class="modal-scrollable" style="z-index: 1070;"><div id="stack2" class="modal hide fade in" tabindex="-1" data-focus-on="input:first" aria-hidden="false" style="display: block; margin-top: -134.5px;">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3>Stack Two</h3>
-  </div>
-  <div class="modal-body">
-    <p>One fine body…</p>
-    <p>One fine body…</p>
-    <input type="text" data-tabindex="1">
-    <input type="text" data-tabindex="2">
-    <button class="btn" data-toggle="modal" href="#stack3">Launch modal</button>
-  </div>
-  <div class="modal-footer">
-    <button type="button" data-dismiss="modal" class="btn">Close</button>
-    <button type="button" class="btn btn-primary">Ok</button>
-  </div>
-</div></div>
-<div class="modal-backdrop fade in" style="z-index: 1060;"></div>
-<div class="modal-scrollable" style="z-index: 1080;"><div id="stack3" class="modal hide fade in" tabindex="-1" data-focus-on="input:first" aria-hidden="false" style="display: block; margin-top: -104.5px;">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3>Stack Three</h3>
-  </div>
-  <div class="modal-body">
-    <p>One fine body…</p>
-    <input type="text" data-tabindex="1">
-    <input type="text" data-tabindex="2">
-  </div>
-  <div class="modal-footer">
-    <button type="button" data-dismiss="modal" class="btn">Close</button>
-    <button type="button" class="btn btn-primary">Ok</button>
-  </div>
-</div></div>
-<div class="modal-backdrop fade in" style="z-index: 1070;"></div>
-  
-  
-  
-</body>
 
+
+
+
+
+        <!-- CSS code from Bootply.com editor -->
+        
+        <style type="text/css">
+                
+        </style>
+    </head>
+    
+    <!-- HTML code from Bootply.com editor -->
+    
+    <body  >
+        
+        <a data-toggle="modal" href="#myModal" class="btn btn-primary">Launch modal</a>
+
+<div class="modal" id="myModal">
+	<div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h4 class="modal-title">Modal title</h4>
+        </div><div class="container"></div>
+        <div class="modal-body">
+          Content for the dialog / modal goes here.
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <a data-toggle="modal" href="#myModal2" class="btn btn-primary">Launch modal</a>
+        </div>
+        <div class="modal-footer">
+          <a href="#" data-dismiss="modal" class="btn">Close</a>
+          <a href="#" class="btn btn-primary">Save changes</a>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="modal" id="myModal2" data-backdrop="static">
+	<div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h4 class="modal-title">Second Modal title</h4>
+        </div><div class="container"></div>
+        <div class="modal-body">
+          Content for the dialog / modal goes here.
+        </div>
+        <div class="modal-footer">
+          <a href="#" data-dismiss="modal" class="btn">Close</a>
+          <a href="#" class="btn btn-primary">Save changes</a>
+        </div>
+      </div>
+    </div>
+</div>
+        
+        <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+        <script type='text/javascript' src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+        
+        <!-- JavaScript jQuery code from Bootply.com editor  -->
+        
+        <script type='text/javascript'>
+        
+        $(document).ready(function() {
+        
+            $('#openBtn').click(function(){
+	$('#myModal').modal({show:true})
+});
+        
+        });
+        
+        </script>
+        
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-40413119-1', 'bootply.com');
+          ga('send', 'pageview');
+        </script>
+        
+        
+    </body>
 </html>
