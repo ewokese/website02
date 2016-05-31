@@ -7,3 +7,8 @@ a {
 h2 {
     margin-left:20px;
 }
+
+.header {
+    display: inline-block;
+    float: left;
+}
