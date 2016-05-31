@@ -1,3 +1,8 @@
+document.write("<div style='width:456px;height:48px;background:#fcfcfc;border:1px solid #aaa;padding:5px;font:11px verdana;margin:auto;color:#222;'>")
+document.write("<a href='http://www.n.nu' style='background:none;border:none;'><img src='https://staticjw.com/n/images/logo/logo-164.png' alt='N.nu Logo' style='height:48px;border:none;margin:0;padding:0;background:none;box-shadow:none;'/></a>")
+document.write("<div style='float:right;margin-right:15px;'><div style='margin:5px;font-weight:bold;'>Make your own website:</div><form name='install' method='post' action='http://www.n.nu' target='_blank'>www.<input type='text' name='username' style='width:100px;font:11px verdana;padding:2px;margin:0;'>.n.nu <input type='submit' name='submit' value='Create' style='margin:0;margin-left:10px;font:11px verdana;padding:2px;'></div>")
+document.write("</form></div>")
+
 $checkBox-size: 200px;
 $checkMark-width: 12px;
 $color: #32A845;
