@@ -54,7 +54,7 @@ function update()
 
 </head>
 
-<body style="margin-top:0;margin-left:50;margin-right:50;" onload="update(); document.f.ta.select();">
+<body onload="update(); document.f.ta.select();">
 
 
 <div>
@@ -225,7 +225,7 @@ $( '.modal' ).on( 'shown.bs.modal', function ( event ) {
 <form name="f" method="post" target="dynamicframe">
 <!-- deleted -->
 
-<script type="text/javascript">edToolbar('canvas');</script>
+<script style="float: right;" type="text/javascript">edToolbar('canvas');</script>
 <center><textarea id="canvas" name="ta" rows="10" cols="140">&lt;h3&gt;Welcome to the HTML Template Tool!&lt;/h3&gt;
 &lt;p&gt;Type HTML in the first textarea bellow, and it will appear in the frame below.&lt;/p&gt;
 
