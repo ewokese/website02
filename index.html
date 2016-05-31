@@ -1,29 +1,326 @@
 <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+        <meta charset="utf-8">
+        <meta name="generator" content="Bootply" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" type="text/css" rel="stylesheet">
+        <!--[if lt IE 9]>
+          <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <link rel="shortcut icon" href="/bootstrap/img/favicon.ico">
+        <link rel="apple-touch-icon" href="/bootstrap/img/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/bootstrap/img/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/bootstrap/img/apple-touch-icon-114x114.png">
 
-<html>
-<head>
 
-	<title>HTML Template Tool</title>
-<script>
-window.onbeforeunload = function (e) {
-    e = e || window.event;
 
-    // For IE and Firefox prior to version 4
-    if (e) {
-        e.returnValue = 'Are you sure you want to leave before you save?';
-    }
 
-    // For Safari
-    return 'Are you sure you want to leave before you save?';
-};
+        <!-- CSS code from Bootply.com editor -->
+        
+        <style type="text/css">
+            
+    
+        </style>
+		
+		<!-- Edit box Code -->
+		
+		 <script src="require.js"></script>
+        <script>
+            var assistantPath = "../targetapp/downloaded/js/";
+            require.config({
+                baseUrl: "js/",
+                paths: {
+                    "designer": "app/designer",
+                    //"widgets": "app/widgets",
+                    //"conditional": "app/conditional",
+                    //"palette": "app/palette",
+
+                    "assistantRoot": assistantPath,
+
+                    // Application references
+                    "config": "app/config",    // separate config so we can correctly path to the icons
+
+                    // Globals
+                    "jquery": assistantPath + "lib/jquery-2.1.1.min",
+                    "TweenMax": assistantPath + "lib/TweenMax",
+                    "TweenLite": assistantPath + "lib/TweenLite",
+                    "mathtools": assistantPath + "core/mathtools",
+                    "colortools": assistantPath + "core/colortools",
+                    "events": assistantPath + "core/events",
+                    "Draggable": assistantPath + "lib/utils/Draggable",
+                    "ThrowProps": assistantPath + "lib/plugins/ThrowPropsPlugin",
+                    "analytics": assistantPath + "lib/analytics",
+                    "raven": assistantPath + "lib/raven",
+
+                    "masonry": assistantPath + "core/masonry.pkgd",
+
+
+                    // tools and components
+                    "tilex" : assistantPath + "core/tilex",
+                    "apptools": assistantPath + "core/apptools",
+                    "render_helper": assistantPath + "common/render_helper",
+                    "infographic_components": assistantPath + "common/infographic_components",
+                    "infographic_component_base": assistantPath + "common/infographic_components/base",
+                    "infographic_tools": assistantPath + "common/infographic_tools",
+                    "composite_renderer": assistantPath + "common/composite_renderer",
+                    "syncObject": assistantPath + "core/syncObject",
+
+                    "image_resolver": assistantPath + "core/image_resolver",
+                    "localization": assistantPath + "core/localization",
+                    "applogging": assistantPath + "core/logging",
+                    "locstrings": assistantPath + "core/locstr",
+                    "groups": assistantPath + "core/groups",
+                    "core": assistantPath + "core",
+                    "controls": assistantPath + "core/controls",
+
+                    "wotx_imageresolver": assistantPath + "wotx/image_helper",
+                    "wows_imageresolver": assistantPath + "wows/image_helper",
+
+                },
+                shim: {
+                    'jquery': {
+                        exports: '$'
+                    },
+                    TweenMax: {
+                        exports: 'TweenMax'//it has not exports just puts stuff in globals
+                    },
+                    TweenLite: {
+                        exports: 'TweenLite'//it has not exports just puts stuff in globals
+                    },
+                    mathtools: {
+                        exports: 'mathtools'//it has not exports just puts stuff in globals
+                    }
+                }
+            });
+
+            require(["jquery", "mathtools","designer", "index" ]);
+        </script>
+		
+		<script type="text/javascript">
+	var editboxHTML = 
+		'<html class="expand close">' +
+		'<head>' +
+		'<style type="text/css">' +
+		'.expand { width: 100%; height: 100%; }' +
+		'.close { border: none; margin: 0px; padding: 0px; }' +
+		'html,body { overflow: hidden; }' +
+		'<\/style>' +
+		'<\/head>' +
+		'<body class="expand close" onload="document.f.ta.focus(); document.f.ta.select();">' +
+		'<form class="expand close" name="f">' +
+		'<textarea class="expand close" style="background: #def;" name="ta" wrap="hard" spellcheck="false">' +
+		'<\/textarea>' +
+		'<\/form>' +
+
+		'<\/body>' +
+		'<\/html>';
+	var defaultStuff = '<h3><center>Welcome to the HTML Template Tool!</center><\/h3>\n' +
+	'<p><center>Type HTML in the first textarea bellow, and it will appear in the frame below.</center><\/p>';
+	var old = '';
+         
+	function init()
+		{
+		window.editbox.document.write(editboxHTML);
+		window.editbox.document.close();
+		window.editbox.document.f.ta.value = defaultStuff;
+		update();
+		}
+	function update()
+	{
+			var textarea = window.editbox.document.f.ta;
+			var d = dynamicframe.document; 
+  
+				if (old != textarea.value) {
+				old = textarea.value;
+				d.open();
+				d.write(old);
+				if (old.replace(/[\r\n]/g,'') == defaultStuff.replace(/[\r\n]/g,''))
+				d.close();
+		}
+				window.setTimeout(update, 150);
+	}
 </script>
-	
-</head>   
+		
+    </head>
+	   <body>
+        
+<h2>HTML Template Tool</h2> 
 
-<FRAMESET resizable="no" cols="20%,80%">
- 
-      <FRAME src="headerbox.html">
-      <FRAME src="editbox.html">
-  </FRAMESET>
+<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg" style="float: right;">Settings</a>
+
+<div class="modal" id="myModal">
+	<div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h4 class="modal-title"><center>Settings</center></h4>
+        </div><div class="container"></div>
+        <div class="modal-body">
+          <center><button type="button" class="btn btn-lg btn-primary" disabled>Save</button></center>
+          <br>
+          <center><a data-toggle="modal" href="#myModal2" class="btn btn-lg btn-primary">Menu</a></center>
+          <br>
+							 <div class="dropdown">
+		  <center><button class="btn btn-lg btn-primarydropdown-toggle" type="button" data-toggle="dropdown" class="center">CSS
+		  <span class="caret"></span></button>
+		  <ul class="dropdown-menu">
+			<li><a value="wows" href="#">WoWS</a></li>
+			<li><a value="wotx" href="#">WoTX</a></li>
+		  </ul>
+		</div></center>
+        </div>
+        <div class="modal-footer">
+          <a href="#" data-dismiss="modal" class="btn">Close</a>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="modal" id="myModal2">
+	<div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h4 class="modal-title"><center>Menu</center></h4>
+        </div><div class="container"></div>
+        <div class="modal-body">
+          <center><a data-toggle="modal" href="#myModal3" class="btn btn-primary btn-lg btn-block">New File</a></center>
+		  <br>
+		  <center><a data-toggle="modal" href="#myModal4" class="btn btn-primary btn-lg btn-block">Load File</a></center>
+        </div>
+        <div class="modal-footer">
+          <a href="#" data-dismiss="modal" class="btn">Close</a>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="modal" id="myModal3">
+	<div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h4 class="modal-title"><center>New File</center></h4>
+        </div><div class="container"></div>
+        <div class="modal-body">
+          <h1><center>Enter Name</center></h1>
+          <br>
+          <input id="snippetname" style="float: left; margin: 5px; font-size: 14px;" value="&lt &gt" size="50" />
+          <br>
+		  <h1><center>Chose CSS</center></h1>
+ <div class="dropdown">
+  <center><button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" class="center">
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a value="wows" href="#">WoWS</a></li>
+    <li><a value="wotx" href="#">WoTX</a></li>
+  </ul>
+</div></center>
+        </div>
+        <div class="modal-footer">
+          <a href="#" data-dismiss="modal" class="btn">Close</a>
+          <a href="#" class="btn btn-primary">Save changes</a>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="modal" id="myModal4" data-backdrop="static">
+	<div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h4 class="modal-title"><center>Load File</center></h4>
+        </div><div class="container"></div>
+        <div class="modal-body">
+          Content for the dialog / modal goes here.
+        </div>
+        <div class="modal-footer">
+          <a href="#" data-dismiss="modal" class="btn">Close</a>
+        </div>
+      </div>
+    </div>
+</div>
+        
+        <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+        <script type='text/javascript' src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+
+
+        
+        <!-- JavaScript jQuery code from Bootply.com editor -->
+        
+        <script type='text/javascript'>
+        
+        $(document).ready(function() {
+        
+            $('#openBtn').click(function(){
+	$('#myModal').modal({show:true})
+});
+
+
+$('.modal').on('hidden.bs.modal', function( event ) {
+                $(this).removeClass( 'fv-modal-stack' );
+                $('body').data( 'fv_open_modals', $('body').data( 'fv_open_modals' ) - 1 );
+                });
+
+
+$( '.modal' ).on( 'shown.bs.modal', function ( event ) {
+                   
+                   // keep track of the number of open modals
+                   
+                   if ( typeof( $('body').data( 'fv_open_modals' ) ) == 'undefined' )
+                   {
+                     $('body').data( 'fv_open_modals', 0 );
+                   }
+                   
+                     
+                   // if the z-index of this modal has been set, ignore.
+                        
+                if ( $(this).hasClass( 'fv-modal-stack' ) )
+                        {
+                        return;
+                        }
+                   
+                $(this).addClass( 'fv-modal-stack' );
+
+                $('body').data( 'fv_open_modals', $('body').data( 'fv_open_modals' ) + 1 );
+
+                $(this).css('z-index', 1040 + (10 * $('body').data( 'fv_open_modals' )));
+
+                $( '.modal-backdrop' ).not( '.fv-modal-stack' )
+                        .css( 'z-index', 1039 + (10 * $('body').data( 'fv_open_modals' )));
+
+
+                $( '.modal-backdrop' ).not( 'fv-modal-stack' )
+                        .addClass( 'fv-modal-stack' ); 
+
+                 });
+
+        
+        });
+        
+        </script>
+        
+    </body>
+	
+	<frameset resizable="yes" rows="50%,25%,25%" onload="init();">
+  <!-- about:blank confuses opera, so use javascript: URLs instead -->
+  <frame name="dynamicframe" src="javascript:'';">
+  <frame name="editbox" src="javascript:'';">
+  <frame <div id ="dataeditor" style="position: absolute; left:0px; bottom: 0px; width: 50%; height: 20%; border: 1px solid white; background-color: darkgray;">
+            <h3 style="float: left;">Data editor:</h3>
+
+            <textarea id="datadefiner"  style="height: 90%; width: 100%; border: 1px solid white;"></textarea>
+
+        </div>
+</frame>
+  
+</frameset>
 
 </html>
