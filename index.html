@@ -159,6 +159,8 @@ function update()
 
 <br>
 <br>
+<br>
+<br>
         <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 
@@ -222,7 +224,10 @@ $( '.modal' ).on( 'shown.bs.modal', function ( event ) {
         </script>
 		
 
-<form name="f" method="post" target="dynamicframe">
+<center><iframe name="dynamicframe" id="dynamicframe" src="javascript:'-'"></iframe></center>
+
+	
+<center><form name="f" method="post" target="dynamicframe">
 <!-- deleted -->
 
 <center><script  type="text/javascript">edToolbar('canvas');</script></center>
@@ -230,9 +235,9 @@ $( '.modal' ).on( 'shown.bs.modal', function ( event ) {
 &lt;p&gt;Type HTML in the first textarea bellow, and it will appear in the frame below.&lt;/p&gt;
 
 </textarea></center>
-</form>
+</form></center>
 
-<center><iframe name="dynamicframe" id="dynamicframe" src="javascript:'-'"></iframe></center>
+
 
 
 </body>
