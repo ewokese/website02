@@ -13,3 +13,10 @@ h2 {
     display: inline-block;
     float: left;
 }
+
+body {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+}
